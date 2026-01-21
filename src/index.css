@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #006400;
+  /* Forest Green */
+  --color-secondary: #000080;
+  /* Navy Blue */
+  --color-accent: #87CEEB;
+  /* Sky Blue */
+  --color-text: #333333;
+  --color-bg: #ffffff;
+  --color-bg-light: #f5f5f5;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* Override default button reset from tailwind if needed */
+button {
+  cursor: pointer;
+}
