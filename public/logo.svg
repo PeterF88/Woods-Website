@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <!-- Tennis ball -->
+  <circle cx="260" cy="40" r="18" fill="#E8DF0D"/>
+  <path d="M 250 30 Q 260 40 250 50" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M 270 30 Q 260 40 270 50" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Text -->
+  <text x="10" y="50" font-family="'Raleway', sans-serif" font-size="36" font-weight="700" fill="#000000">
+    woods
+  </text>
+  <text x="140" y="50" font-family="'Raleway', sans-serif" font-size="24" font-weight="400" fill="#000000">
+    tennis
+  </text>
+</svg>
