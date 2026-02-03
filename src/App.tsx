@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { Programs } from './pages/Programs';
-import { Pricing } from './pages/Pricing';
-import { About } from './pages/About';
-import { Foundation } from './pages/Foundation';
-import { Contact } from './pages/Contact';
-import { Placeholder } from './pages/Placeholder';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Programs from './pages/Programs';
+import Pricing from './pages/Pricing';
+import About from './pages/About';
+import Foundation from './pages/Foundation';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/foundation" element={<Foundation />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Placeholder />} />
         </Route>
       </Routes>
     </BrowserRouter>

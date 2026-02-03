@@ -1,0 +1,303 @@
+/* ===== Programs Page Styles ===== */
+
+.programs-page {
+    padding-top: 0;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.section-header h2 {
+    margin-bottom: var(--spacing-3);
+}
+
+.section-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-12);
+}
+
+.program-card {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.program-card h3 {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-4);
+}
+
+.program-card p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
+/* Events Section */
+.events-section {
+    margin-bottom: var(--spacing-12);
+}
+
+.events-section h3 {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-6);
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+}
+
+.event-info h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-1);
+}
+
+.event-info p {
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Resources Section */
+.resources-section {
+    margin-bottom: var(--spacing-12);
+}
+
+.resources-section h3 {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-4);
+}
+
+.resources-section>p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
+.resources-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+}
+
+.resources-list li a {
+    display: block;
+    padding: var(--spacing-4);
+    background-color: var(--color-gray-100);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    transition: all var(--transition-fast);
+}
+
+.resources-list li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* Info Box */
+.info-box {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-lg);
+    margin-top: var(--spacing-8);
+}
+
+.info-box h4 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-4);
+}
+
+.info-box ul {
+    margin: var(--spacing-4) 0;
+    padding-left: var(--spacing-6);
+}
+
+.info-box li {
+    list-style: disc;
+    margin-bottom: var(--spacing-2);
+}
+
+.info-box a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+.fine-print {
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.section-gray .info-box {
+    background-color: var(--color-light);
+    color: var(--color-text);
+    border: 2px solid var(--color-gray-200);
+}
+
+.section-gray .info-box a {
+    color: var(--color-primary);
+}
+
+/* Classes Grid */
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.class-card {
+    background-color: var(--color-light);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.class-card h3 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary);
+}
+
+.class-card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Leagues Grid */
+.leagues-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+.league-card {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+}
+
+.league-card h3 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--color-gray-300);
+}
+
+.league-info {
+    font-size: var(--font-size-sm);
+}
+
+.league-level {
+    margin-bottom: var(--spacing-4);
+}
+
+.league-level h4 {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.league-level ul {
+    color: var(--color-text-muted);
+}
+
+.league-level li {
+    margin-bottom: var(--spacing-1);
+}
+
+.league-level a {
+    color: var(--color-primary);
+}
+
+.league-cta {
+    text-align: center;
+    margin: var(--spacing-8) 0;
+}
+
+/* CTA Section */
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: var(--spacing-4);
+}
+
+.cta-content>p {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-8);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .leagues-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .programs-grid,
+    .classes-grid,
+    .resources-list {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,356 @@
+/* ===== Pricing Page Styles ===== */
+
+.pricing-page {
+    padding-top: 0;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.section-header h2 {
+    margin-bottom: var(--spacing-3);
+}
+
+.section-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-dark .section-subtitle {
+    color: var(--color-gray-400);
+}
+
+.fine-print {
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+}
+
+/* Pricing Table */
+.pricing-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-6);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: var(--spacing-5);
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--font-size-sm);
+}
+
+.pricing-table tbody tr {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.pricing-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: var(--color-gray-50);
+}
+
+.pricing-table td:first-child {
+    font-weight: var(--font-weight-medium);
+}
+
+.pricing-table td:not(:first-child) {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Info Note */
+.info-note {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-4) var(--spacing-6);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.info-note a {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: underline;
+}
+
+/* Pass Cards */
+.pass-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.pass-card {
+    background-color: var(--color-light);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.pass-card h3 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-primary);
+}
+
+.pass-card .price {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-2);
+}
+
+.pass-card .price span {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text-muted);
+}
+
+.pass-card .monthly {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* Enroll Info */
+.enroll-info {
+    background-color: var(--color-light);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.enroll-info h4 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-4);
+}
+
+.enroll-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.enroll-info a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Seasonal Grid */
+.seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-6);
+}
+
+.seasonal-card {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.seasonal-card h3 {
+    font-size: var(--font-size-base);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--color-gray-300);
+}
+
+.seasonal-prices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.season {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.season .label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.season .price {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+.seasonal-card.special {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.seasonal-card.special h3 {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.seasonal-card.special .subtitle {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-3);
+    opacity: 0.8;
+}
+
+.seasonal-card.special .price-single {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-3);
+}
+
+.seasonal-card.special .details {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-10);
+}
+
+.benefit-column h3 {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--color-gray-700);
+}
+
+.benefit-column>ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.benefit-column>ul>li {
+    position: relative;
+    padding-left: var(--spacing-6);
+    line-height: 1.6;
+}
+
+.benefit-column>ul>li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-bold);
+}
+
+.benefit-column ul ul {
+    margin-top: var(--spacing-2);
+    padding-left: var(--spacing-4);
+}
+
+.benefit-column ul ul li {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+    margin-bottom: var(--spacing-1);
+}
+
+/* Decision Section */
+.decision-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.decision-section h2 {
+    margin-bottom: var(--spacing-6);
+}
+
+.decision-section p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--color-text-muted);
+}
+
+/* Scholarship Section */
+.scholarship-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.scholarship-section h2 {
+    margin-bottom: var(--spacing-6);
+}
+
+.scholarship-section p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-4);
+}
+
+.scholarship-section .btn {
+    margin-top: var(--spacing-4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pass-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seasonal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pass-cards,
+    .seasonal-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: var(--spacing-3);
+        font-size: var(--font-size-sm);
+    }
+}

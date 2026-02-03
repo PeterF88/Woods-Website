@@ -1,0 +1,169 @@
+/* ===== Contact Page Styles ===== */
+
+.contact-page {
+    padding-top: 0;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+}
+
+/* Contact Info */
+.contact-info h2 {
+    margin-bottom: var(--spacing-8);
+}
+
+.info-item {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.info-item h3 {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-1);
+}
+
+.info-item a {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    transition: color var(--transition-fast);
+}
+
+.info-item a:hover {
+    color: var(--color-primary);
+}
+
+.newsletter-link {
+    margin-top: var(--spacing-8);
+}
+
+/* Contact Form */
+.contact-form-wrapper h2 {
+    margin-bottom: var(--spacing-6);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.form-success {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.form-success h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.form-success p {
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Hours Section */
+.section-header .section-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-10);
+}
+
+.section-header h2 {
+    margin-bottom: var(--spacing-3);
+}
+
+.section-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+}
+
+.hours-card {
+    background-color: var(--color-light);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.hours-card h3 {
+    font-size: var(--font-size-base);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid var(--color-gray-200);
+}
+
+.hours-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.hours-card li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* Map Section */
+.map-section {
+    width: 100%;
+    height: 400px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-10);
+    }
+
+    .hours-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hours-grid {
+        grid-template-columns: 1fr;
+    }
+}

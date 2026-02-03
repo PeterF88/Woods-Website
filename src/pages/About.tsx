@@ -1,65 +1,222 @@
+import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import './About.css';
 
-export const About = () => {
+const About = () => {
+    const revealRefs = useRef<(HTMLElement | null)[]>([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        revealRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const addToRefs = (el: HTMLElement | null) => {
+        if (el && !revealRefs.current.includes(el)) {
+            revealRefs.current.push(el);
+        }
+    };
+
     return (
-        <div className="about-page">
+        <main className="about-page">
             {/* Hero Section */}
-            <section className="hero" style={{ height: '50vh', backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80")' }}>
+            <section className="hero">
+                <div
+                    className="hero-background"
+                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1560012057-4372e14c5085?w=1920&h=800&fit=crop)' }}
+                />
+                <div className="hero-overlay" />
                 <div className="hero-content">
-                    <h1 className="hero-title">OUR STORY</h1>
-                    <p className="hero-subtitle">TAKING THE GAME TO THE COMMUNITY</p>
+                    <h1 className="hero-title">Our Story</h1>
+                    <p className="hero-subtitle">Taking the Game to the Community Since 2008</p>
                 </div>
             </section>
 
-            {/* Content Section */}
-            <div style={{ backgroundColor: 'white', color: '#121212', padding: '8rem 0' }}>
+            {/* Mission Section */}
+            <section className="section" ref={addToRefs}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '6rem', alignItems: 'center', marginBottom: '10rem' }}>
-                        <div>
-                            <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>A TRADITION OF EXCELLENCE</h2>
-                            <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#444' }}>
-                                Founded with a mission to take the game to the community, Woods Tennis Center has grown from a local park facility into Lincoln's premier public tennis destination.
-                            </p>
-                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#666' }}>
-                                Since 2008, we have expanded our reach from 26 players to over 12,000 annually. Our focus remains on holistic player development—developing not just tennis skills, but character, leadership, and mental wellness.
-                            </p>
-                            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#666' }}>
-                                As a 501(c)3 non-profit organization through the Woods Tennis Education Foundation, we prioritize accessibility, ensuring that everyone in our community has the opportunity to experience the joy of the game.
-                            </p>
+                    <div className="mission-content reveal" ref={addToRefs}>
+                        <h2>Our Mission</h2>
+                        <p className="mission-statement">
+                            The mission at Woods Tennis Center is to develop players and provide play opportunities
+                            for individuals of all ages, backgrounds, and abilities in an inclusive environment
+                            promoting health and wellness in Lincoln and surrounding communities. We seek to make
+                            tennis a public sport, working intentionally to change perceptions that surround the game.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Growth Story */}
+            <section className="section section-gray" ref={addToRefs}>
+                <div className="container">
+                    <div className="story-content reveal" ref={addToRefs}>
+                        <div className="story-stats">
+                            <div className="stat-big">
+                                <span className="number">26</span>
+                                <span className="label">Junior Players in 2008</span>
+                            </div>
+                            <div className="stat-arrow">→</div>
+                            <div className="stat-big">
+                                <span className="number">12,000+</span>
+                                <span className="label">Players Annually Today</span>
+                            </div>
                         </div>
-                        <div style={{
-                            width: '100%',
-                            aspectRatio: '4/5',
-                            background: 'url("https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80")',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            borderRadius: 'var(--radius-md)',
-                            borderTop: '5px solid var(--color-primary)'
-                        }}></div>
+                        <p className="story-text">
+                            The reach of our mission continues to grow every year. These individuals seek tennis
+                            for the mental and physical health benefits as well as for the desire to improve their game,
+                            range in age from 3 to 93 and skill from beginner to national champion.
+                        </p>
+                        <p className="story-text">
+                            Deliberate work is done to provide a comprehensive pathway for all players, centered around
+                            supportive relationships, holistic player development, and fostering strong community.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Four Pillars */}
+            <section className="section" ref={addToRefs}>
+                <div className="container">
+                    <div className="section-header reveal" ref={addToRefs}>
+                        <h2>Our Core Values</h2>
                     </div>
 
-                    <h2 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '6rem' }}>OUR LEADERSHIP</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem' }}>
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ width: '150px', height: '150px', borderRadius: '50%', background: '#eee', margin: '0 auto 2rem', border: '2px solid var(--color-primary)' }}></div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Kevin Heim</h3>
-                            <p style={{ color: 'var(--color-primary)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>EXECUTIVE DIRECTOR</p>
-                            <p style={{ color: '#666' }}>Leading the mission to grow tennis in Lincoln for over 15 years.</p>
+                    <div className="pillars-grid reveal" ref={addToRefs}>
+                        <div className="pillar-card">
+                            <div className="pillar-icon">🎾</div>
+                            <h3>Programming for All</h3>
+                            <p>
+                                Comprehensive programming and a culture of inclusivity are core at Woods Tennis Center.
+                                Our highly experienced team works intentionally to provide positive experiences at all
+                                levels of play from neighborhood players to juniors, high school teams, adults, social
+                                and USTA players, seniors, local/state/regional/national tournament competitions,
+                                Special Olympians, youth and adults in wheelchair and adaptive tennis, and youth enrolled
+                                in other community educational programming.
+                            </p>
+                            <p className="pillar-tagline">All are welcome here.</p>
                         </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ width: '150px', height: '150px', borderRadius: '50%', background: '#eee', margin: '0 auto 2rem', border: '2px solid var(--color-primary)' }}></div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Talor Wain</h3>
-                            <p style={{ color: 'var(--color-primary)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>HEAD PROFESSIONAL</p>
-                            <p style={{ color: '#666' }}>Dedicated to technical excellence and high-performance training.</p>
+
+                        <div className="pillar-card">
+                            <div className="pillar-icon">🌟</div>
+                            <h3>Holistic Player Development</h3>
+                            <p>
+                                Our team at Woods Tennis Center prioritizes whole player development. We strive to ensure
+                                that our players are developing important life skills that will not only help them reach
+                                their on-court goals, but also allow them to succeed off the tennis court.
+                            </p>
+                            <p>
+                                Program curricula centers around tennis skills while emphasizing strong character and
+                                leadership development, off-court training, mental wellness, and scholastic achievements.
+                            </p>
                         </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <div style={{ width: '150px', height: '150px', borderRadius: '50%', background: '#eee', margin: '0 auto 2rem', border: '2px solid var(--color-primary)' }}></div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>WTEF Board</h3>
-                            <p style={{ color: 'var(--color-primary)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1rem' }}>COMMUNITY FOUNDATION</p>
-                            <p style={{ color: '#666' }}>Volunteers committed to breaking down barriers for youth tennis.</p>
+
+                        <div className="pillar-card">
+                            <div className="pillar-icon">🤝</div>
+                            <h3>Building Community</h3>
+                            <p>
+                                Woods Tennis Center takes pride in being a good neighbor and partner, giving to and
+                                investing in our community through volunteering and collaborations. We focus on creating
+                                a welcoming community hub where everyone is accepted and encouraged to live healthy lives.
+                            </p>
+                            <p>
+                                We seek to purposefully invite and welcome in all members of our community. At Woods
+                                Tennis Center, we celebrate diversity and view our unique differences as assets that
+                                ultimately make us stronger together.
+                            </p>
+                        </div>
+
+                        <div className="pillar-card">
+                            <div className="pillar-icon">🚀</div>
+                            <h3>Breaking Down Barriers</h3>
+                            <p>
+                                Intentional, research-based programming on and offsite at Woods Tennis Center emphasizes
+                                inclusiveness by addressing disparities magnified by health, income, opportunity, and
+                                educational inequities.
+                            </p>
+                            <div className="pillar-stats">
+                                <div className="stat">
+                                    <span className="number">2,000+</span>
+                                    <span className="label">Youth & adults in outreach programming</span>
+                                </div>
+                                <div className="stat">
+                                    <span className="number">4,500+</span>
+                                    <span className="label">Free racquets provided since 2009</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            {/* Team Section */}
+            <section className="section section-gray" ref={addToRefs}>
+                <div className="container">
+                    <div className="section-header reveal" ref={addToRefs}>
+                        <h2>Our Team</h2>
+                        <p className="section-subtitle">Led by experienced professionals dedicated to growing the game</p>
+                    </div>
+
+                    <div className="team-links reveal" ref={addToRefs}>
+                        <a
+                            href="https://www.woodstenniscenter.com/our-team"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-link"
+                        >
+                            <span className="team-link-title">Meet Our Team</span>
+                            <span className="team-link-desc">View our coaching staff and leadership</span>
+                        </a>
+                        <a
+                            href="https://www.woodstenniscenter.com/our-board"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-link"
+                        >
+                            <span className="team-link-title">Our Board</span>
+                            <span className="team-link-desc">Woods Tennis Education Foundation Board</span>
+                        </a>
+                        <a
+                            href="https://www.woodstenniscenter.com/join-our-team"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-link"
+                        >
+                            <span className="team-link-title">Join Our Team</span>
+                            <span className="team-link-desc">Career opportunities at Woods</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="section section-dark" ref={addToRefs}>
+                <div className="container">
+                    <div className="cta-content reveal" ref={addToRefs}>
+                        <h2>Ready to Join Our Community?</h2>
+                        <p>Whether you're picking up a racquet for the first time or looking to compete at the highest level, there's a place for you at Woods.</p>
+                        <div className="cta-buttons">
+                            <Link to="/programs" className="btn btn-light btn-lg">View Programs</Link>
+                            <Link to="/contact" className="btn btn-light btn-lg">Contact Us</Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 };
+
+export default About;
