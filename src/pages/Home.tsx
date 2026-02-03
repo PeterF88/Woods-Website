@@ -110,8 +110,8 @@ const Home = () => {
             <section className="section goods-section" ref={addToRefs}>
                 <div className="container">
                     <div className="section-header reveal" ref={addToRefs}>
-                        <h2>The Goods</h2>
-                        <p className="section-subtitle">Everything you need for your tennis journey</p>
+                        <h2>What We Offer</h2>
+                        <p className="section-subtitle">Lessons, leagues, and court rentals</p>
                     </div>
                     <div className="goods-grid">
                         {goods.map((item, index) => (

@@ -45,6 +45,28 @@ const Pricing = () => {
                 </div>
             </section>
 
+            {/* Facility Highlights */}
+            <section className="facility-highlights" ref={addToRefs}>
+                <div className="container">
+                    <div className="highlights-grid reveal" ref={addToRefs}>
+                        <div className="highlight-item">
+                            <span className="highlight-number">6</span>
+                            <span className="highlight-label">Indoor Courts</span>
+                        </div>
+                        <div className="highlight-item">
+                            <span className="highlight-number">12</span>
+                            <span className="highlight-label">Outdoor Courts</span>
+                            <span className="highlight-note">with lighting</span>
+                        </div>
+                        <div className="highlight-item">
+                            <span className="highlight-number">🎾</span>
+                            <span className="highlight-label">Ball Machine Access</span>
+                            <span className="highlight-note">available for rental</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Court Pricing Section */}
             <section className="section" ref={addToRefs}>
                 <div className="container">
