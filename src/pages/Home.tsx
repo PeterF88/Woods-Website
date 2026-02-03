@@ -1,59 +1,102 @@
+import { useEffect } from 'react';
+import { Instagram, Facebook, Twitter } from 'lucide-react';
 import './Home.css';
 
 export const Home = () => {
+    useEffect(() => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
+    const goods = [
+        {
+            title: "Private & Group Lessons",
+            image: "https://images.unsplash.com/photo-1595435064219-c80ce544b606?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+            link: "/programs"
+        },
+        {
+            title: "Junior Classes",
+            image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+            link: "/programs"
+        },
+        {
+            title: "Adult Programs",
+            image: "https://images.unsplash.com/photo-1622163642998-1eaec05e8486?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+            link: "/programs"
+        }
+    ];
+
     return (
         <div className="home">
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-content">
-                    <h1 className="hero-title">Experience the Deep Woods</h1>
-                    <p className="hero-subtitle">Reconnect with nature. Find your serenity in the heart of the forest.</p>
-                    <button className="cta-primary">Explore Now</button>
-                </div>
-                <div className="scroll-indicator">
-                    <div className="mouse"></div>
-                    <span>Scroll to explore</span>
-                </div>
-            </section>
-
-            {/* About Section */}
-            <section className="about-section">
-                <div className="container">
-                    <div className="about-grid">
-                        <div className="about-text">
-                            <h2 className="section-title">A Sanctuary for the Soul</h2>
-                            <p>The "Woods" is more than just a place; it's a feeling. We bring the tranquility of the forest to your doorstep, offering a peaceful retreat from the modern world.</p>
-                            <p>Our philosophy is rooted in the calming power of nature. Every element of our sanctuary is designed to evoke the timeless beauty of the woods.</p>
-                        </div>
-                        <div className="about-image-placeholder"></div>
-                    </div>
-                </div>
-            </section>
-            {/* Gallery Section */}
-            <section className="gallery-section">
-                <div className="container">
-                    <h2 className="section-title text-center">Inspiration from the Wild</h2>
-                    <div className="gallery-grid">
-                        <div className="gallery-item large"></div>
-                        <div className="gallery-item small"></div>
-                        <div className="gallery-item small"></div>
-                        <div className="gallery-item medium"></div>
+                    <h1 className="hero-title">HOME OF WOODS TENNIS</h1>
+                    <p className="hero-subtitle">LINCOLN'S PREMIER TENNIS FACILITY</p>
+                    <div className="cta-buttons">
+                        <button className="btn btn-primary">Book a Court</button>
+                        <button className="btn btn-secondary">Set up a Court Reserve Account</button>
                     </div>
                 </div>
             </section>
 
-            {/* Contact Section */}
-            <section className="contact-section">
+            {/* The Goods Section */}
+            <section className="the-goods">
                 <div className="container">
-                    <div className="contact-card">
-                        <h2 className="section-title">Reach Out to the Woods</h2>
-                        <p>Have questions or want to learn more about our sanctuary? Send us a message.</p>
-                        <form className="contact-form">
-                            <input type="text" placeholder="Your Name" />
-                            <input type="email" placeholder="Your Email" />
-                            <textarea placeholder="Your Message"></textarea>
-                            <button type="submit" className="cta-primary">Send Message</button>
-                        </form>
+                    <h2 className="section-label reveal">THE GOODS</h2>
+                    <div className="goods-grid">
+                        {goods.map((item, index) => (
+                            <div key={index} className="goods-item reveal">
+                                <div
+                                    className="goods-image"
+                                    style={{ backgroundImage: `url(${item.image})` }}
+                                ></div>
+                                <a href={item.link} className="btn">{item.title}</a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Newsletter Section */}
+            <section className="newsletter reveal">
+                <div className="container">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+                        <input type="email" placeholder="Email Address" required />
+                        <button type="submit" className="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </section>
+
+            {/* Social Section */}
+            <section className="social-section reveal">
+                <div className="container">
+                    <h2 className="social-title">SOCIAL</h2>
+                    <div className="social-icons">
+                        <a href="#" className="social-icon">
+                            <Facebook size={64} strokeWidth={1.5} />
+                        </a>
+                        <a href="#" className="social-icon">
+                            <Instagram size={64} strokeWidth={1.5} />
+                        </a>
+                        <a href="#" className="social-icon">
+                            <Twitter size={64} strokeWidth={1.5} />
+                        </a>
                     </div>
                 </div>
             </section>

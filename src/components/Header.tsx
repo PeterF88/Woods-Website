@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 
 export const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,17 +19,18 @@ export const Header = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Sanctuary', path: '/sanctuary' },
+    { name: 'Programs', path: '/programs' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
+    { name: 'Foundation', path: '/foundation' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${isScrolled || !isHome ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          WOODS
+          WOODS TENNIS
         </Link>
 
         {/* Desktop Navigation */}
@@ -44,7 +47,7 @@ export const Header = () => {
           className="mobile-menu-btn"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
         >
-          {isMobileOpen ? <X /> : <Menu />}
+          {isMobileOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
