@@ -59,27 +59,17 @@ const Programs = () => {
                         <div className="program-card">
                             <h3>Group Class Descriptions</h3>
                             <p>Comprehensive group instruction for all skill levels and ages.</p>
-                            <a
-                                href="https://www.woodstenniscenter.com/group-class-descriptions"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-secondary"
-                            >
+                            <Link to="/classes" className="btn btn-secondary">
                                 View Classes
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="program-card">
                             <h3>Private Lessons</h3>
                             <p>One-on-one instruction tailored to your player's specific needs and goals.</p>
-                            <a
-                                href="https://www.woodstenniscenter.com/private-lessons"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-secondary"
-                            >
+                            <Link to="/private-lessons" className="btn btn-secondary">
                                 Learn More
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

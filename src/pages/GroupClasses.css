@@ -1,0 +1,245 @@
+/* ===== Group Classes Page Styles ===== */
+
+.group-classes-page {
+    padding-top: 0;
+}
+
+/* Class Navigation */
+.class-nav {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-4) 0;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.class-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-6);
+    flex-wrap: wrap;
+}
+
+.class-nav-links a {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.class-nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Class Header */
+.class-header {
+    text-align: center;
+    margin-bottom: var(--spacing-10);
+}
+
+.class-header h2 {
+    margin-bottom: var(--spacing-4);
+}
+
+.class-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.section-dark .class-intro {
+    color: var(--color-gray-400);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.skills-card {
+    background-color: var(--color-light);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.section-gray .skills-card {
+    background-color: var(--color-light);
+}
+
+.section-dark .skills-card {
+    background-color: var(--color-gray-800);
+}
+
+.skills-card h3 {
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.section-dark .skills-card h3 {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.skills-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.skills-card li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    padding-left: var(--spacing-4);
+    position: relative;
+}
+
+.section-dark .skills-card li {
+    color: var(--color-gray-400);
+}
+
+.skills-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+}
+
+/* Parent Tip */
+.parent-tip {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+}
+
+.parent-tip h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-3);
+}
+
+.parent-tip p {
+    opacity: 0.9;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Class Variants */
+.class-variants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+}
+
+.class-variant {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+}
+
+.class-variant h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-3);
+}
+
+.class-variant p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Tournament Levels */
+.tournament-levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.level-card {
+    background-color: var(--color-gray-800);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 2px solid var(--color-gray-700);
+}
+
+.level-card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-2);
+}
+
+.level-card p {
+    color: var(--color-gray-400);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.utr-info {
+    text-align: center;
+}
+
+.utr-info a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+/* CTA */
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: var(--spacing-4);
+}
+
+.cta-content>p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .skills-grid,
+    .tournament-levels {
+        grid-template-columns: 1fr;
+    }
+
+    .class-variants {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .class-nav-links {
+        gap: var(--spacing-3);
+    }
+
+    .class-nav-links a {
+        font-size: var(--font-size-xs);
+    }
+}

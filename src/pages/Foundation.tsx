@@ -98,14 +98,9 @@ const Foundation = () => {
                                 Our adaptive and wheelchair tennis programs ensure that players of all abilities can
                                 experience the joy of tennis. We provide specialized equipment and trained instructors.
                             </p>
-                            <a
-                                href="https://www.woodstenniscenter.com/adaptiveandwheelchair"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-secondary"
-                            >
+                            <Link to="/adaptive" className="btn btn-secondary">
                                 Learn More
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="program-card">
@@ -115,14 +110,9 @@ const Foundation = () => {
                                 Over 2,000 youth and adults participate in community outreach programming across the city.
                                 We bring tennis to neighborhoods, schools, and community centers that traditionally lack access.
                             </p>
-                            <a
-                                href="https://www.woodstenniscenter.com/outreach"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-secondary"
-                            >
+                            <Link to="/outreach" className="btn btn-secondary">
                                 Learn More
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

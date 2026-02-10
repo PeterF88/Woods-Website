@@ -9,7 +9,7 @@ const Header = () => {
   const location = useLocation();
 
   // Pages with hero backgrounds where header should be transparent
-  const heroPages = ['/', '/about', '/programs', '/pricing', '/contact', '/foundation'];
+  const heroPages = ['/', '/about', '/programs', '/pricing', '/contact', '/foundation', '/registrations'];
   const hasHero = heroPages.includes(location.pathname);
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/programs', label: 'Programs' },
+    { path: '/registrations', label: 'Registrations' },
     { path: '/pricing', label: 'Pricing' },
     { path: '/about', label: 'About' },
     { path: '/foundation', label: 'Foundation' },

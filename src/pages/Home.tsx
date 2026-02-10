@@ -79,26 +79,8 @@ const Home = () => {
                 />
                 <div className="hero-overlay" />
                 <div className="hero-content">
-                    <h1 className="hero-title">Home of Woods Tennis</h1>
+                    <h1 className="hero-title">Taking the Game to the Community</h1>
                     <p className="hero-subtitle">Lincoln's Premier Tennis Facility</p>
-                    <div className="hero-buttons">
-                        <a
-                            href="https://courtreserve.com/Online/Reservations/Index/4714"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-light btn-lg"
-                        >
-                            Book a Court
-                        </a>
-                        <a
-                            href="https://courtreserve.com/Online/Account/LogIn/4714"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-light btn-lg"
-                        >
-                            Court Reserve Account
-                        </a>
-                    </div>
                 </div>
                 <div className="hero-scroll-indicator">
                     <span>Scroll to explore</span>

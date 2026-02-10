@@ -171,15 +171,10 @@ const About = () => {
                     </div>
 
                     <div className="team-links reveal" ref={addToRefs}>
-                        <a
-                            href="https://www.woodstenniscenter.com/our-team"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="team-link"
-                        >
+                        <Link to="/team" className="team-link">
                             <span className="team-link-title">Meet Our Team</span>
                             <span className="team-link-desc">View our coaching staff and leadership</span>
-                        </a>
+                        </Link>
                         <a
                             href="https://www.woodstenniscenter.com/our-board"
                             target="_blank"

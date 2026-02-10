@@ -1,0 +1,139 @@
+/* ===== Private Lessons Page Styles ===== */
+
+.private-lessons-page {
+    padding-top: 0;
+}
+
+.lesson-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lesson-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-10);
+}
+
+.lesson-intro h2 {
+    margin-bottom: var(--spacing-4);
+}
+
+.lesson-intro p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+/* Waitlist Notice */
+.waitlist-notice {
+    background-color: #fef3cd;
+    border: 2px solid #ffc107;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-10);
+}
+
+.waitlist-notice h3 {
+    color: #856404;
+    margin-bottom: var(--spacing-3);
+}
+
+.waitlist-notice p {
+    color: #856404;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Pricing Info */
+.pricing-info {
+    margin-bottom: var(--spacing-10);
+}
+
+.pricing-info h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+}
+
+.price-card {
+    background-color: var(--color-gray-100);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+}
+
+.price-card h4 {
+    font-size: var(--font-size-base);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 2px solid var(--color-gray-300);
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-row span:first-child {
+    color: var(--color-text-muted);
+}
+
+.price-row .price {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+/* Request Section */
+.request-section {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: var(--spacing-10);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-8);
+}
+
+.request-section h3 {
+    color: var(--color-light);
+    margin-bottom: var(--spacing-3);
+}
+
+.request-section p {
+    opacity: 0.9;
+    margin-bottom: var(--spacing-6);
+}
+
+.request-section .btn {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.request-section .btn:hover {
+    background-color: var(--color-gray-100);
+}
+
+/* Back Link */
+.back-link {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
