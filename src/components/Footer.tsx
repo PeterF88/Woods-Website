@@ -31,7 +31,9 @@ const Footer = () => {
                     <div className="footer-grid">
                         {/* Brand & Contact */}
                         <div className="footer-brand">
-                            <Link to="/" className="footer-logo">WOODS TENNIS</Link>
+                            <Link to="/" className="footer-logo">
+                                <img src="/woods-logo.png" alt="Woods Tennis Center" className="footer-logo-image" />
+                            </Link>
                             <p className="footer-tagline">Taking the Game to the Community Since 2008</p>
                             <div className="footer-contact">
                                 <a href="https://maps.google.com/?q=401+S+33rd+St,+Lincoln,+NE+68510" target="_blank" rel="noopener noreferrer" className="contact-item">

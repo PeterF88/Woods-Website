@@ -1,41 +1,41 @@
 /* ===== ECC-Inspired Design System ===== */
 
-/* Import Google Fonts - Clean sans-serif like ECC */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Import Google Fonts - Raleway to match Woods Tennis Center */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 
 /* ===== CSS Custom Properties ===== */
 :root {
-  /* Color Palette - ECC inspired */
-  --color-primary: #1a365d;
-  /* Navy blue */
-  --color-secondary: #4299e1;
-  /* Sky blue accent */
-  --color-accent: #2b6cb0;
-  /* Medium blue */
-  --color-dark: #0d1117;
+  /* Color Palette - Woods Tennis Center brand */
+  --color-primary: #1a1a1a;
+  /* Dark charcoal */
+  --color-secondary: #E8DF0D;
+  /* Woods yellow (tennis ball) */
+  --color-accent: #E8DF0D;
+  /* Yellow accent */
+  --color-dark: #1a1a1a;
   /* Dark background */
-  --color-darker: #080b0f;
+  --color-darker: #111111;
   /* Darker background */
   --color-light: #ffffff;
   /* White */
-  --color-gray-100: #f7fafc;
-  --color-gray-200: #edf2f7;
-  --color-gray-300: #e2e8f0;
-  --color-gray-400: #cbd5e0;
-  --color-gray-500: #a0aec0;
-  --color-gray-600: #718096;
-  --color-gray-700: #4a5568;
-  --color-gray-800: #2d3748;
-  --color-gray-900: #1a202c;
-  --color-text: #1a202c;
+  --color-gray-100: #f7f7f7;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #e0e0e0;
+  --color-gray-400: #bdbdbd;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+  --color-text: #1a1a1a;
   /* Dark text */
   --color-text-light: #ffffff;
   /* Light text */
-  --color-text-muted: #718096;
+  --color-text-muted: #616161;
   /* Muted text */
 
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

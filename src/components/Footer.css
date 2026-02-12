@@ -1,4 +1,4 @@
-/* ===== Footer Styles ===== */
+/* ===== Footer Styles - Woods Tennis Center ===== */
 
 .footer {
     background-color: var(--color-dark);
@@ -7,7 +7,7 @@
 
 /* Newsletter Section */
 .footer-newsletter {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     padding: var(--spacing-12) 0;
     text-align: center;
 }
@@ -23,12 +23,26 @@
     margin-bottom: var(--spacing-3);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    color: var(--color-primary);
 }
 
 .newsletter-text {
     font-size: var(--font-size-base);
-    opacity: 0.9;
+    color: var(--color-primary);
+    opacity: 0.8;
     margin-bottom: var(--spacing-6);
+}
+
+.footer-newsletter .btn-light {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-color: var(--color-primary);
+    border-radius: 0;
+}
+
+.footer-newsletter .btn-light:hover {
+    background-color: var(--color-darker);
+    color: var(--color-light);
 }
 
 /* Main Footer */
@@ -48,13 +62,14 @@
 }
 
 .footer-logo {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-extrabold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-light);
     display: inline-block;
     margin-bottom: var(--spacing-3);
+}
+
+.footer-logo-image {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .footer-tagline {
@@ -112,7 +127,7 @@
 }
 
 .footer-links a:hover {
-    color: var(--color-light);
+    color: var(--color-secondary);
 }
 
 /* Social Icons */
@@ -135,7 +150,7 @@
 
 .footer-social a:hover {
     background-color: var(--color-secondary);
-    color: var(--color-light);
+    color: var(--color-primary);
     transform: translateY(-2px);
 }
 

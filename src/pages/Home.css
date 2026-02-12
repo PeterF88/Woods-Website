@@ -138,10 +138,11 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-primary);
-    transition: gap var(--transition-fast);
+    transition: gap var(--transition-fast), color var(--transition-fast);
 }
 
 .goods-card:hover .goods-card-link {
+    color: var(--color-secondary);
     gap: var(--spacing-2);
 }
 

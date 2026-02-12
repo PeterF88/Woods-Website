@@ -175,15 +175,10 @@ const About = () => {
                             <span className="team-link-title">Meet Our Team</span>
                             <span className="team-link-desc">View our coaching staff and leadership</span>
                         </Link>
-                        <a
-                            href="https://www.woodstenniscenter.com/our-board"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="team-link"
-                        >
+                        <Link to="/board" className="team-link">
                             <span className="team-link-title">Our Board</span>
                             <span className="team-link-desc">Woods Tennis Education Foundation Board</span>
-                        </a>
+                        </Link>
                         <a
                             href="https://www.woodstenniscenter.com/join-our-team"
                             target="_blank"
