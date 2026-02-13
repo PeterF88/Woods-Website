@@ -4,6 +4,7 @@
 .outreach-page {
     width: 100%;
     background-color: #f2f2f2;
+    padding-top: var(--header-height);
 }
 
 /* ===== Yellow Banner ===== */

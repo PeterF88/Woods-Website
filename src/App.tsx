@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Programs from './pages/Programs';
@@ -28,10 +29,12 @@ import Calendar from './pages/Calendar';
 import RegisterForClasses from './pages/RegisterForClasses';
 import JuniorRegister from './pages/JuniorRegister';
 import AdultRegister from './pages/AdultRegister';
+import JoinOurTeam from './pages/JoinOurTeam';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -69,6 +72,7 @@ function App() {
           <Route path="/register-for-classes" element={<RegisterForClasses />} />
           <Route path="/junior-register" element={<JuniorRegister />} />
           <Route path="/adult-register" element={<AdultRegister />} />
+          <Route path="/join-our-team" element={<JoinOurTeam />} />
         </Route>
       </Routes>
     </BrowserRouter>

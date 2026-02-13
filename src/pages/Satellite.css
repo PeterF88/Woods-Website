@@ -1,0 +1,143 @@
+/* Satellite Page Styles */
+
+.satellite-page {
+    min-height: 100vh;
+}
+
+.satellite-section {
+    padding: 4rem 0;
+}
+
+.satellite-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.satellite-section h2 {
+    font-family: var(--font-family);
+    font-size: 2.2rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.satellite-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.satellite-session-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    border-top: 4px solid var(--color-primary);
+}
+
+.satellite-session-card h3 {
+    font-family: var(--font-family);
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.satellite-session-card .session-details {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.satellite-session-card .session-details strong {
+    color: var(--color-text);
+}
+
+.satellite-session-card .brochure-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-bottom: 1.2rem;
+    transition: color 0.2s;
+}
+
+.satellite-session-card .brochure-link:hover {
+    text-decoration: underline;
+}
+
+.bright-lights-box {
+    background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #ff9800;
+}
+
+.bright-lights-box h4 {
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+}
+
+.bright-lights-box p {
+    font-size: 0.92rem;
+    color: var(--color-gray-600);
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+}
+
+.bright-lights-box a {
+    color: #e65100;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.bright-lights-box a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+.register-btn.full-width {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .satellite-section {
+        padding: 3rem 0;
+    }
+
+    .satellite-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .bright-lights-box {
+        padding: 1.2rem 1.5rem;
+    }
+}

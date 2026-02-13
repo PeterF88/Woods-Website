@@ -42,9 +42,6 @@ const Header = () => {
       label: 'Adult Tennis',
       dropdown: [
         { label: 'Adult Classes & Drills', path: '/adult-classes' },
-        { label: 'Leagues & USTA', path: '/leagues' },
-        { label: 'Club Championships', path: '/club-champs' },
-        { label: 'Cardio Tennis', path: '/adult-classes#cardio' },
         { label: 'Register for Classes', path: '/adult-register' },
       ]
     },
@@ -63,7 +60,7 @@ const Header = () => {
         { label: 'Our Story', path: '/about' },
         { label: 'Our Team', path: '/team' },
         { label: 'Our Board', path: '/board' },
-        { label: 'Join Our Team', path: 'https://www.woodstenniscenter.com/join-our-team', external: true },
+        { label: 'Join Our Team', path: '/join-our-team' },
         { label: 'Foundation', path: '/foundation' },
         { label: 'Phase II', path: '/phase-ii' },
       ]

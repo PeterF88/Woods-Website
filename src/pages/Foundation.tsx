@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import './Foundation.css';
 
 const Foundation = () => {
@@ -30,162 +29,86 @@ const Foundation = () => {
         }
     };
 
+    const boardMembers = [
+        { name: "Marg Donlan", role: "President", initials: "MD", linked: true },
+        { name: "David Clark", role: "Treasurer", initials: "DC", linked: true },
+        { name: "Nelle Woods Jamison", role: "Secretary", initials: "NWJ", linked: true },
+        { name: "Lynn Callahan", role: "Board Member", initials: "LC", linked: false },
+        { name: "Karen Plachy", role: "Board Member", initials: "KP", linked: true },
+        { name: "Brian Boesche", role: "Board Member", initials: "BB", linked: true },
+        { name: "Lisa Smith", role: "Board Member", initials: "LS", linked: false },
+        { name: "Christa Pope", role: "Board Member", initials: "CP", linked: true },
+        { name: "Paige Felt", role: "Board Member", initials: "PF", linked: true },
+    ];
+
     return (
         <main className="foundation-page">
-            {/* Hero Section */}
-            <section className="hero">
-                <div
-                    className="hero-background"
-                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1560012057-4372e14c5085?w=1920&h=800&fit=crop)' }}
-                />
-                <div className="hero-overlay" />
-                <div className="hero-content">
-                    <h1 className="hero-title">Woods Tennis Education Foundation</h1>
-                    <p className="hero-subtitle">Transforming Lives Through Tennis</p>
-                </div>
+            {/* Email Banner */}
+            <section className="foundation-email-banner">
+                <a href="mailto:wtef.woods@gmail.com">wtef.woods@gmail.com</a>
             </section>
 
-            {/* Mission Section */}
-            <section className="section" ref={addToRefs}>
-                <div className="container">
-                    <div className="foundation-mission reveal" ref={addToRefs}>
-                        <h2>Our Mission</h2>
-                        <p className="mission-text">
-                            The Woods Tennis Education Foundation is dedicated to removing barriers and making tennis
-                            accessible to everyone in our community. Through scholarships, equipment donations, and
-                            inclusive programming, we ensure that financial circumstances never prevent someone from
-                            experiencing the lifelong benefits of tennis.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            {/* About Section - Yellow Background */}
+            <section className="foundation-about reveal" ref={addToRefs}>
+                <div className="foundation-about-inner">
+                    <h2>About</h2>
 
-            {/* Programs Section */}
-            <section className="section section-gray" ref={addToRefs}>
-                <div className="container">
-                    <div className="section-header reveal" ref={addToRefs}>
-                        <h2>Our Programs</h2>
-                        <p className="section-subtitle">Making tennis accessible to all</p>
-                    </div>
-
-                    <div className="programs-grid reveal" ref={addToRefs}>
-                        <div className="program-card">
-                            <div className="program-icon">🏆</div>
-                            <h3>Scholarships</h3>
-                            <p>
-                                Each year over 30 adults and juniors receive scholarship assistance to learn this
-                                lifetime sport. We believe financial circumstances should never be a barrier to
-                                playing tennis.
-                            </p>
-                            <Link to="/pricing#scholarships" className="btn btn-secondary">
-                                Learn More
-                            </Link>
-                        </div>
-
-                        <div className="program-card">
-                            <div className="program-icon">🎾</div>
-                            <h3>Free Racquets</h3>
-                            <p>
-                                Since 2009, over 4,500 tennis racquets have been provided free of charge to players
-                                in need. Every player deserves the right equipment to learn and grow in the sport.
-                            </p>
-                        </div>
-
-                        <div className="program-card">
-                            <div className="program-icon">🤝</div>
-                            <h3>Adaptive Play</h3>
-                            <p>
-                                Our adaptive and wheelchair tennis programs ensure that players of all abilities can
-                                experience the joy of tennis. We provide specialized equipment and trained instructors.
-                            </p>
-                            <Link to="/adaptive" className="btn btn-secondary">
-                                Learn More
-                            </Link>
-                        </div>
-
-                        <div className="program-card">
-                            <div className="program-icon">🌍</div>
-                            <h3>Outreach / NJTL</h3>
-                            <p>
-                                Over 2,000 youth and adults participate in community outreach programming across the city.
-                                We bring tennis to neighborhoods, schools, and community centers that traditionally lack access.
-                            </p>
-                            <Link to="/outreach" className="btn btn-secondary">
-                                Learn More
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* The Woods Event */}
-            <section className="section" ref={addToRefs}>
-                <div className="container">
-                    <div className="event-section reveal" ref={addToRefs}>
-                        <h2>The Woods Event</h2>
+                    <div className="foundation-about-text">
                         <p>
-                            Our annual fundraising event brings together the tennis community to support our mission.
-                            Join us for an evening of celebration, fellowship, and giving back.
+                            As a 501(c)3 organization, Woods Tennis and Educational Foundation (WTEF) provides
+                            financial and other resources in support of tennis programs, scholarships and activities
+                            offered to individuals from all backgrounds in Lincoln, Nebraska and surrounding
+                            communities through Woods Tennis Center.
                         </p>
+                    </div>
+
+                    <p className="foundation-about-text" style={{ marginBottom: '0.5rem' }}>
+                        Examples of these programs include:
+                    </p>
+
+                    <ul className="foundation-programs-list">
+                        <li>Need- and merit-based scholarships</li>
+                        <li>Free racquets to first-time participants in a Woods Tennis group lesson</li>
+                        <li>Tennis for individuals with intellectual and physical disabilities</li>
+                        <li>Community outreach to Lincoln-area Parks &amp; Recreation Centers and Lincoln Community Learning Centers</li>
+                        <li>Summer tennis at the local city parks</li>
+                        <li>Wheelchair tennis</li>
+                        <li>The Madonna Rehabilitation adaptive sports program</li>
+                    </ul>
+
+                    <p className="foundation-fundraising-text">
+                        WTEF raises funds from the community in order to support these programs, as well as to
+                        endow future plans, equipment and facilities at both Woods Tennis Center and other Lincoln
+                        and surrounding communities public tennis facilities.  Taking the Game to the Community!
+                    </p>
+
+                    <div className="foundation-contact-btn-wrapper">
                         <a
-                            href="https://www.woodstenniscenter.com/thewoodsevent"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary btn-lg"
+                            href="mailto:wtef.woods@gmail.com"
+                            className="foundation-contact-btn"
                         >
-                            Learn About The Woods Event
+                            Contact Us
                         </a>
                     </div>
                 </div>
             </section>
 
-            {/* Impact Stats */}
-            <section className="section section-dark" ref={addToRefs}>
-                <div className="container">
-                    <div className="impact-grid reveal" ref={addToRefs}>
-                        <div className="impact-stat">
-                            <span className="number">30+</span>
-                            <span className="label">Scholarships Awarded Annually</span>
-                        </div>
-                        <div className="impact-stat">
-                            <span className="number">4,500+</span>
-                            <span className="label">Free Racquets Since 2009</span>
-                        </div>
-                        <div className="impact-stat">
-                            <span className="number">2,000+</span>
-                            <span className="label">In Outreach Programming</span>
-                        </div>
-                        <div className="impact-stat">
-                            <span className="number">Since 2008</span>
-                            <span className="label">Serving Lincoln Community</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Our Board Section */}
+            <section className="foundation-board-section reveal" ref={addToRefs}>
+                <h2>OUR BOARD</h2>
 
-            {/* Donate CTA */}
-            <section className="section donate-section" ref={addToRefs}>
-                <div className="container">
-                    <div className="donate-content reveal" ref={addToRefs}>
-                        <h2>Make an Impact</h2>
-                        <p>
-                            Your contribution helps us continue our mission of taking the game to the community.
-                            Every donation supports scholarships, free equipment, and programming that changes lives.
-                        </p>
-                        <div className="donate-buttons">
-                            <a
-                                href="https://www.woodstenniscenter.com/foundation"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-primary btn-lg"
-                            >
-                                Donate Now
-                            </a>
-                            <Link to="/contact" className="btn btn-secondary btn-lg">
-                                Contact Us
-                            </Link>
+                <div className="foundation-board-grid">
+                    {boardMembers.map((member, index) => (
+                        <div key={index} className="foundation-board-card">
+                            <div className="foundation-board-photo">
+                                <span className="board-initials">{member.initials}</span>
+                            </div>
+                            <h3 className={`foundation-board-name${member.linked ? '' : ' no-underline'}`}>
+                                {member.name}
+                            </h3>
+                            <p className="foundation-board-role">{member.role}</p>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </section>
         </main>

@@ -2,6 +2,7 @@
 
 .adaptive-page {
     width: 100%;
+    padding-top: var(--header-height);
 }
 
 /* Gray Banner */

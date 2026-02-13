@@ -396,70 +396,7 @@
     text-decoration: underline;
 }
 
-/* Satellite Section */
-.satellite-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.satellite-session-card {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 2rem;
-    border-top: 4px solid var(--primary);
-}
-
-.satellite-session-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-}
-
-.satellite-session-card .session-details {
-    font-size: 1rem;
-    color: var(--gray-600);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.satellite-session-card .session-details strong {
-    color: var(--text-dark);
-}
-
-.bright-lights-box {
-    background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    margin: 1.5rem 0;
-    border-left: 4px solid #ff9800;
-}
-
-.bright-lights-box h4 {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--text-dark);
-    margin-bottom: 0.75rem;
-}
-
-.bright-lights-box p {
-    font-size: 0.92rem;
-    color: var(--gray-600);
-    line-height: 1.7;
-    margin-bottom: 0.4rem;
-}
-
-.bright-lights-box a {
-    color: #e65100;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.bright-lights-box a:hover {
-    text-decoration: underline;
-}
 
 /* Info Link Row */
 .info-link-row {
@@ -594,5 +531,327 @@
     .weather-info-box,
     .bright-lights-box {
         padding: 1.2rem 1.5rem;
+    }
+}
+
+/* ========================================= */
+/* MERGED STYLES FOR CARDIO AND USTA SECTIONS */
+/* ========================================= */
+
+/* ===== Cardio Tennis Styles ===== */
+
+/* Title Section */
+.cardio-title-section {
+    background-color: #ffffff;
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+.cardio-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+/* Info Section - Gray Background */
+.cardio-info-section {
+    background-color: #d9d9d9;
+    padding: 40px 20px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+/* Fix for container width issues if needed, strictly speaking 100vw is risky with scrollbars 
+   but for full width breakout it's common. Better approach for standard flow:
+*/
+.register-full-width-section {
+    width: 100%;
+    padding: 0;
+}
+
+.cardio-title-section,
+.cardio-info-section,
+.cardio-schedule-section,
+.cardio-photo-section,
+.usta-content-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+}
+
+.cardio-info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cardio-description {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin: 0 0 5px;
+}
+
+.cardio-pricing {
+    margin-top: 30px;
+}
+
+.cardio-pricing p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.cardio-or {
+    font-style: italic;
+}
+
+/* Schedule Section - Yellow Background */
+.cardio-schedule-section {
+    background-color: #e8df6e;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cardio-schedule-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 25px;
+}
+
+.cardio-schedule-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cardio-schedule-content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.cardio-session-title {
+    margin-bottom: 10px !important;
+    font-size: 1.15rem !important;
+}
+
+.cardio-notice {
+    margin-top: 15px !important;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.cardio-check-back {
+    margin-top: 20px !important;
+    font-style: italic;
+}
+
+.cardio-call-ahead {
+    margin-top: 10px !important;
+}
+
+.cardio-call-ahead a {
+    color: #1a1a2e;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.cardio-checkin {
+    margin-top: 10px !important;
+}
+
+/* Photo Section */
+.cardio-photo-section {
+    width: 100%;
+    line-height: 0;
+}
+
+.cardio-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== USTA Leagues Styles ===== */
+
+/* Main Content Section - Black Background */
+.usta-content-section {
+    background-color: #000000;
+    padding: 60px 20px 50px;
+    /* min-height: 70vh; removed excessive height since it's part of a larger page */
+}
+
+.usta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* USTA Logo */
+.usta-logo-container {
+    margin-bottom: 30px;
+}
+
+.usta-logo {
+    max-width: 240px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Heading */
+.usta-heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+/* Text */
+.usta-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
+
+/* Links */
+.usta-link {
+    color: #a8c7fa;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.usta-link:hover {
+    color: #ccdeff;
+}
+
+/* Button Row */
+.usta-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 35px;
+}
+
+.usta-rosters-button {
+    display: inline-block;
+    background-color: #e8df6e;
+    color: #1a1a1a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.usta-rosters-button:hover {
+    background-color: #d4cb5a;
+    transform: scale(1.03);
+}
+
+/* Arrow SVG */
+.usta-arrow {
+    width: 50px;
+    height: 50px;
+    transform: scaleX(-1);
+}
+
+/* Yellow Dots Divider */
+.usta-dots-divider {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.usta-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e8df6e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Subheading */
+.usta-subheading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 15px;
+}
+
+/* Email Link */
+.usta-email-link {
+    color: #a8c7fa;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.usta-email-link:hover {
+    color: #ccdeff;
+}
+
+/* Merged Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Cardio Responsive */
+    .cardio-title {
+        font-size: 2.2rem;
+    }
+
+    .cardio-schedule-title {
+        font-size: 2rem;
+    }
+
+    .cardio-description,
+    .cardio-pricing p,
+    .cardio-schedule-content p {
+        font-size: 0.95rem;
+    }
+
+    /* USTA Responsive */
+    .usta-heading {
+        font-size: 1.6rem;
+    }
+
+    .usta-subheading {
+        font-size: 1.4rem;
+    }
+
+    .usta-text {
+        font-size: 0.95rem;
+    }
+
+    .usta-rosters-button {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+
+    .usta-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .usta-dot {
+        width: 10px;
+        height: 10px;
     }
 }

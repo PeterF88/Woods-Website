@@ -1,201 +1,245 @@
 /* ===== Foundation Page Styles ===== */
+/* Matches the live woodstenniscenter.com/foundation layout */
 
 .foundation-page {
-    padding-top: 0;
+    padding-top: var(--header-height);
 }
 
-/* Section Header */
-.section-header {
+/* Email Banner */
+.foundation-email-banner {
     text-align: center;
-    margin-bottom: var(--spacing-12);
-}
-
-.section-header h2 {
-    margin-bottom: var(--spacing-3);
-}
-
-.section-subtitle {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
-}
-
-/* Foundation Mission */
-.foundation-mission {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.foundation-mission h2 {
-    margin-bottom: var(--spacing-6);
-}
-
-.mission-text {
-    font-size: var(--font-size-xl);
-    line-height: 1.8;
-    color: var(--color-text-muted);
-}
-
-/* Programs Grid */
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-8);
-}
-
-.program-card {
+    padding: var(--spacing-6) var(--spacing-4);
     background-color: var(--color-light);
-    padding: var(--spacing-8);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    text-align: center;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.program-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-}
-
-.program-icon {
-    font-size: var(--font-size-5xl);
-    margin-bottom: var(--spacing-4);
-}
-
-.program-card h3 {
+.foundation-email-banner a {
     font-size: var(--font-size-xl);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: var(--spacing-4);
-    color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: underline;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 0.02em;
 }
 
-.program-card p {
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: var(--spacing-6);
-}
-
-.program-card .btn {
-    margin-top: auto;
-}
-
-/* Event Section */
-.event-section {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.event-section h2 {
-    margin-bottom: var(--spacing-6);
-}
-
-.event-section p {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
-    line-height: 1.8;
-    margin-bottom: var(--spacing-8);
-}
-
-/* Impact Grid */
-.impact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-8);
-    text-align: center;
-}
-
-.impact-stat {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2);
-}
-
-.impact-stat .number {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-extrabold);
+.foundation-email-banner a:hover {
     color: var(--color-secondary);
 }
 
-.impact-stat .label {
-    font-size: var(--font-size-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-gray-400);
+/* About Section - Yellow Background */
+.foundation-about {
+    background-color: #E8DF0D;
+    padding: var(--spacing-16) var(--spacing-6);
 }
 
-/* Donate Section */
-.donate-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-    color: var(--color-light);
-}
-
-.donate-content {
-    max-width: 700px;
+.foundation-about-inner {
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.donate-content h2 {
+.foundation-about h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+    color: var(--color-text);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.foundation-about-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-8);
+}
+
+.foundation-about-text p {
     margin-bottom: var(--spacing-6);
 }
 
-.donate-content>p {
-    font-size: var(--font-size-lg);
-    opacity: 0.95;
+.foundation-programs-list {
+    list-style: disc;
+    padding-left: var(--spacing-8);
     margin-bottom: var(--spacing-8);
-    line-height: 1.8;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--color-text);
 }
 
-.donate-buttons {
+.foundation-programs-list li {
+    margin-bottom: var(--spacing-2);
+}
+
+.foundation-fundraising-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-8);
+}
+
+/* Contact Us Button */
+.foundation-contact-btn-wrapper {
+    text-align: center;
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-4);
+}
+
+.foundation-contact-btn {
+    display: inline-block;
+    padding: var(--spacing-3) var(--spacing-10);
+    background-color: var(--color-dark);
+    color: var(--color-light) !important;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: 2px solid var(--color-dark);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.foundation-contact-btn:hover {
+    background-color: transparent;
+    color: var(--color-dark) !important;
+}
+
+/* Our Board Section */
+.foundation-board-section {
+    padding: var(--spacing-16) var(--spacing-6);
+    background-color: var(--color-light);
+}
+
+.foundation-board-section h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-12);
+    color: var(--color-text);
+}
+
+/* Board Grid - 3 columns */
+.foundation-board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-12) var(--spacing-8);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual Board Member Card */
+.foundation-board-card {
+    text-align: center;
     display: flex;
-    gap: var(--spacing-4);
+    flex-direction: column;
+    align-items: center;
+}
+
+.foundation-board-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--spacing-4);
+    background-color: var(--color-gray-200);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    box-shadow: var(--shadow-md);
 }
 
-.donate-section .btn-primary {
-    background-color: var(--color-light);
-    color: var(--color-primary);
-    border-color: var(--color-light);
+.foundation-board-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.donate-section .btn-primary:hover {
-    background-color: transparent;
-    color: var(--color-light);
+.foundation-board-photo .board-initials {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-600);
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-.donate-section .btn-secondary {
-    background-color: transparent;
-    color: var(--color-light);
-    border-color: var(--color-light);
+.foundation-board-name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-1);
+    text-decoration: underline;
 }
 
-.donate-section .btn-secondary:hover {
-    background-color: var(--color-light);
-    color: var(--color-primary);
+.foundation-board-name.no-underline {
+    text-decoration: none;
 }
 
-/* Responsive */
+.foundation-board-role {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    font-weight: var(--font-weight-normal);
+}
+
+/* Bottom Banner Image */
+.foundation-banner-image {
+    width: 100%;
+    max-width: 1100px;
+    margin: var(--spacing-12) auto var(--spacing-8);
+    display: block;
+    padding: 0 var(--spacing-6);
+}
+
+.foundation-banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
 @media (max-width: 900px) {
-    .programs-grid {
-        grid-template-columns: 1fr;
+    .foundation-board-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-8) var(--spacing-6);
     }
 
-    .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-6);
+    .foundation-board-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .foundation-about h2,
+    .foundation-board-section h2 {
+        font-size: var(--font-size-4xl);
     }
 }
 
 @media (max-width: 600px) {
-    .impact-grid {
+    .foundation-board-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-8);
     }
 
-    .donate-buttons {
-        flex-direction: column;
-        align-items: center;
+    .foundation-board-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .foundation-about h2,
+    .foundation-board-section h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .foundation-about-text,
+    .foundation-programs-list,
+    .foundation-fundraising-text {
+        font-size: 1.05rem;
     }
 }

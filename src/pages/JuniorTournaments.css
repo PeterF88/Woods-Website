@@ -3,6 +3,7 @@
 .jt-banner {
     background-color: #c0c0c0;
     padding: 40px 20px;
+    padding-top: calc(var(--header-height) + 40px);
     text-align: left;
     padding-left: 60px;
 }
