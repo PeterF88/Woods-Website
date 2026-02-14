@@ -31,6 +31,13 @@ import JuniorRegister from './pages/JuniorRegister';
 import AdultRegister from './pages/AdultRegister';
 import JoinOurTeam from './pages/JoinOurTeam';
 
+import JuniorTennis from './pages/JuniorTennis';
+import AdultTennis from './pages/AdultTennis';
+import Community from './pages/Community';
+import AboutUs from './pages/AboutUs';
+import GeneralInfo from './pages/GeneralInfo';
+import EventsMain from './pages/EventsMain';
+
 function App() {
   return (
     <BrowserRouter>
@@ -43,6 +50,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/foundation" element={<Foundation />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* New Landing Pages */}
+          <Route path="/junior-tennis" element={<JuniorTennis />} />
+          <Route path="/adult-tennis" element={<AdultTennis />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/general-info" element={<GeneralInfo />} />
+          <Route path="/events" element={<EventsMain />} />
 
           {/* Junior Tennis */}
           <Route path="/junior-classes" element={<JuniorClasses />} />

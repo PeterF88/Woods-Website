@@ -6,165 +6,119 @@
 
 .junior-main-container {
     display: flex;
+    flex-direction: column;
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
-    gap: 40px;
+    gap: 20px;
     position: relative;
 }
 
-/* Sidebar Styles */
-.junior-sidebar {
-    width: 280px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-    /* Sticky implementation */
-    position: sticky;
-    top: 20px;
-    height: fit-content;
-    max-height: 90vh;
-    overflow-y: auto;
+/* Sub Tabs Styles */
+.tabs-nav.sub-tabs {
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    /* Align tabs to start or center? Start usually better for many tabs */
 }
 
-.progression-chart-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.sidebar-nav-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.sidebar-nav-btn {
-    background-color: #333;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
+.tabs-nav.sub-tabs .tab-btn {
     font-size: 1rem;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    border: none;
-    display: block;
+    padding: 0.75rem 1.5rem;
 }
 
-.sidebar-nav-btn:hover {
-    background-color: #555;
-    color: #fff;
+/* Content Split Layout */
+.junior-content-area-split {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-/* Content Area Styles */
-.junior-content-area {
-    flex-grow: 1;
+.junior-content-left {
+    flex: 2;
     min-width: 0;
     /* Prevent flex overflow */
 }
 
-/* Updated Section Styles to fit within content area */
-.junior-section {
-    width: 100%;
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.junior-section.bg-white {
-    background-color: #ffffff;
-}
-
-.junior-section.bg-gray {
-    background-color: #dedede;
-}
-
-.junior-content-container {
-    width: 100%;
-    /* Changed from fixed max-width to fill available space */
-    max-width: 1000px;
-    /* Reduced max-width since it's sharing space */
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin: 0 auto;
-}
-
-.junior-content-container.text-only {
-    display: block;
-}
-
-.junior-content-container.reverse {
-    flex-direction: row-reverse;
-}
-
-.junior-text-column {
-    flex: 6;
-    /* Give text slightly more space */
-}
-
-.junior-media-column {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.junior-content-right {
+    flex: 1;
     min-width: 300px;
+    max-width: 400px;
+    position: sticky;
+    top: 20px;
+}
+
+.progression-chart-img-right {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Content Styles */
+.junior-section-tab {
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .junior-section-title {
-    font-size: 2.2rem;
-    /* Slightly smaller due to sidebar */
-    color: #333;
+    font-size: 2rem;
+    color: var(--color-text);
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    scroll-margin-top: 20px;
-    /* Offset for scroll to link */
 }
 
 .junior-section-text {
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--color-gray-600);
     margin-bottom: 20px;
     white-space: pre-wrap;
 }
 
+/* Skills List */
 .junior-skills-list {
     list-style-type: none;
     padding-left: 0;
+    margin-bottom: 20px;
 }
 
 .junior-skills-list li {
     position: relative;
     padding-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .junior-skills-list li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #000;
+    color: var(--color-darker);
     font-weight: bold;
 }
 
+/* Headers */
+h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* Video Containers */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     width: 100%;
-    background-color: #000;
+    background-color: var(--color-darker);
     overflow: hidden;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .video-container iframe {
@@ -176,65 +130,49 @@
     border: 0;
 }
 
-/* Specific adjustment for Tournament Pathway if video is below */
-.junior-content-container.column-layout {
+.video-column {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
 }
 
-.junior-content-container.column-layout .junior-text-column,
-.junior-content-container.column-layout .junior-media-column {
-    width: 100%;
-    max-width: 800px;
-}
-
-.junior-content-container.column-layout .junior-media-column {
-    margin-top: 40px;
+.mt-4 {
+    margin-top: 1.5rem;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .junior-main-container {
+    .junior-content-area-split {
         flex-direction: column;
     }
 
-    .junior-sidebar {
+    .junior-content-right {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
+        max-width: none;
         position: static;
-        justify-content: center;
-        max-height: none;
+        order: -1;
+        /* Move chart to top on mobile? Or bottom? Sidebar usually goes to bottom or top. */
     }
 
-    .progression-chart-img {
-        max-width: 300px;
-        margin-right: 20px;
-    }
+    /* If user wants chart on right always, on mobile "right" means below or above. 
+       Usually sidebar nav goes to top. Chart might be better at bottom if it's large. 
+       But current design had it top in sidebar. 
+       Let's put it at the bottom to not push content down too much, or keep it side by side until smaller screen. */
 
-    .sidebar-nav-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: auto;
-        justify-content: center;
+    .junior-content-right {
+        order: 2;
+        /* Move to bottom */
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 768px) {
-    .junior-content-container {
-        flex-direction: column !important;
-    }
-
-    .junior-content-container.reverse {
-        flex-direction: column !important;
-    }
-
-    .junior-sidebar {
+    .tabs-nav.sub-tabs {
         flex-direction: column;
     }
 
-    .sidebar-nav-container {
-        flex-direction: column;
+    .tabs-nav.sub-tabs .tab-btn {
         width: 100%;
+        text-align: left;
     }
 }

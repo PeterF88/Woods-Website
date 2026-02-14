@@ -31,57 +31,55 @@ const Header = () => {
     { label: 'Home', path: '/' },
     {
       label: 'Junior Tennis',
+      path: '/junior-tennis',
       dropdown: [
-        { label: 'Junior Class Descriptions', path: '/junior-classes' },
-        { label: 'Junior Tournaments', path: '/junior-tournaments' },
-        { label: 'Outreach / NJTL', path: '/outreach' },
-        { label: 'Register for Classes', path: '/junior-register' },
+        { label: 'Junior Class Descriptions', path: '/junior-tennis?tab=0' },
+        { label: 'Junior Tournaments', path: '/junior-tennis?tab=1' },
+        { label: 'Outreach / NJTL', path: '/junior-tennis?tab=2' },
+        { label: 'Register for Classes', path: '/junior-tennis?tab=3' }
       ]
     },
     {
       label: 'Adult Tennis',
+      path: '/adult-tennis',
       dropdown: [
-        { label: 'Adult Classes & Drills', path: '/adult-classes' },
-        { label: 'Register for Classes', path: '/adult-register' },
+        { label: 'Adult Classes & Drills', path: '/adult-tennis?tab=0' },
+        { label: 'Register for Classes', path: '/adult-tennis?tab=1' }
       ]
     },
     {
       label: 'Community & Access',
+      path: '/community',
       dropdown: [
-        { label: 'Adaptive / Wheelchair', path: '/adaptive' },
-        { label: 'Satellite Sites', path: '/satellite' },
-        { label: 'Community Access', path: '/community-access' },
-        { label: 'Community Closet', path: '/shop#closet' },
+        { label: 'Adaptive / Wheelchair', path: '/community?tab=0' },
+        { label: 'Satellite Sites', path: '/community?tab=1' },
+        { label: 'Community Access', path: '/community?tab=2' },
+        { label: 'Community Closet', path: '/community?tab=3' }
       ]
     },
     {
       label: 'About Us',
+      path: '/about-us',
       dropdown: [
-        { label: 'Our Story', path: '/about' },
-        { label: 'Our Team', path: '/team' },
-        { label: 'Our Board', path: '/board' },
-        { label: 'Join Our Team', path: '/join-our-team' },
-        { label: 'Foundation', path: '/foundation' },
-        { label: 'Phase II', path: '/phase-ii' },
+        { label: 'Our Story', path: '/about-us?tab=0' },
+        { label: 'Our Team', path: '/about-us?tab=1' },
+        { label: 'Our Board', path: '/about-us?tab=2' },
+        { label: 'Join Our Team', path: '/about-us?tab=3' },
+        { label: 'Foundation', path: '/about-us?tab=4' },
+        { label: 'Phase II', path: '/about-us?tab=5' }
       ]
     },
     {
       label: 'General Info',
+      path: '/general-info',
       dropdown: [
-        { label: 'Pricing & Memberships', path: '/pricing' },
-        { label: 'Policies & Weather', path: '/policies' },
-        { label: 'Woods Shop', path: '/shop' },
-        { label: 'Location & Contact', path: '/contact' },
+        { label: 'Pricing & Memberships', path: '/general-info?tab=0' },
+        { label: 'Policies & Weather', path: '/general-info?tab=1' },
+        { label: 'Woods Shop', path: '/general-info?tab=2' },
+        { label: 'Location & Contact', path: '/general-info?tab=3' }
       ]
     },
-    {
-      label: 'Events',
-      dropdown: [
-        { label: 'Calendar', path: '/calendar' },
-        { label: 'Heartland Challenge', path: '/heartland-challenge' },
-        { label: 'The Woods Event', path: '/foundation#event' },
-      ]
-    }
+    { label: 'Events', path: '/events' }
   ];
 
   const toggleDropdown = (label: string) => {
@@ -101,62 +99,66 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="header-nav">
-          {navItems.map((item, index) => (
-            <div key={index} className="nav-item-wrapper">
-              {item.dropdown ? (
-                <div className="nav-dropdown-trigger">
-                  <span className={`nav-link ${activeDropdown === item.label ? 'active' : ''}`}>
-                    {item.label} <ChevronDown size={14} className="dropdown-arrow" />
-                  </span>
-                  <div className="nav-dropdown-menu">
-                    {item.label === 'Play' ? (
-                      <div className="dropdown-mega-grid">
-                        {item.dropdown.map((section: any, idx) => (
-                          <div key={idx} className="dropdown-section">
-                            <h4 className="dropdown-header">{section.header}</h4>
-                            <ul>
-                              {section.items.map((subItem: any, subIdx: number) => (
-                                <li key={subIdx}>
-                                  {subItem.path.startsWith('http') ? (
-                                    <a href={subItem.path} target="_blank" rel="noopener noreferrer" className="dropdown-link">
-                                      {subItem.label}
-                                    </a>
-                                  ) : (
-                                    <Link to={subItem.path} className="dropdown-link">{subItem.label}</Link>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <ul className="dropdown-list">
-                        {item.dropdown.map((subItem: any, idx) => (
-                          <li key={idx}>
-                            {subItem.path.startsWith('http') ? (
-                              <a href={subItem.path} target="_blank" rel="noopener noreferrer" className="dropdown-link">
-                                {subItem.label}
-                              </a>
-                            ) : (
-                              <Link to={subItem.path} className="dropdown-link">{subItem.label}</Link>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+          {navItems.map((item, index) => {
+            const isActive = location.pathname === item.path || (item.dropdown && item.dropdown.some(sub => location.pathname === sub.path.split('?')[0]));
+
+            return (
+              <div key={index} className="nav-item-wrapper">
+                {item.dropdown ? (
+                  <div className="nav-dropdown-trigger">
+                    <Link to={item.path} className={`nav-link ${isActive ? 'active' : ''}`}>
+                      {item.label} <ChevronDown size={14} className="dropdown-arrow" />
+                    </Link>
+                    <div className="nav-dropdown-menu">
+                      {item.label === 'Play' ? (
+                        <div className="dropdown-mega-grid">
+                          {item.dropdown.map((section: any, idx: number) => (
+                            <div key={idx} className="dropdown-section">
+                              <h4 className="dropdown-header">{section.header}</h4>
+                              <ul>
+                                {section.items.map((subItem: any, subIdx: number) => (
+                                  <li key={subIdx}>
+                                    {subItem.path.startsWith('http') ? (
+                                      <a href={subItem.path} target="_blank" rel="noopener noreferrer" className="dropdown-link">
+                                        {subItem.label}
+                                      </a>
+                                    ) : (
+                                      <Link to={subItem.path} className="dropdown-link">{subItem.label}</Link>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <ul className="dropdown-list">
+                          {item.dropdown.map((subItem: any, idx: number) => (
+                            <li key={idx}>
+                              {subItem.path.startsWith('http') ? (
+                                <a href={subItem.path} target="_blank" rel="noopener noreferrer" className="dropdown-link">
+                                  {subItem.label}
+                                </a>
+                              ) : (
+                                <Link to={subItem.path} className="dropdown-link">{subItem.label}</Link>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <Link
-                  to={item.path}
-                  className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-                >
-                  {item.label}
-                </Link>
-              )}
-            </div>
-          ))}
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
+            );
+          })}
           <a
             href="https://courtreserve.com/Online/Reservations/Index/4714"
             target="_blank"

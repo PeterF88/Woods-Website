@@ -1,24 +1,28 @@
 import React from 'react';
 import './Shop.css';
+import closetLogo from '../assets/community_closet_logo.png';
 
 const Shop = () => {
     return (
-        <main className="shop-page">
-            <section className="hero hero-small">
-                <div className="hero-background" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1596707327891-dbd735d46654?w=1920&h=600&fit=crop)' }} />
-                <div className="hero-overlay" />
-                <div className="hero-content">
-                    <h1>Woods Shop</h1>
-                    <p>Pro Shop, Stringing, and Equipment</p>
+        <div className="community-closet-content">
+            <h2 className="community-closet-title">Community Closet</h2>
+            <div className="community-closet-body">
+                <div className="community-closet-logo">
+                    <img src={closetLogo} alt="Give the Game Community Closet Logo" />
                 </div>
-            </section>
-            <section className="container section">
-                <h2>Pro Shop</h2>
-                <p>Visit our pro shop for the latest racquets, shoes, and apparel.</p>
-                <h2>Community Closet</h2>
-                <p>Information about our equipment donation and access program.</p>
-            </section>
-        </main>
+                <div className="community-closet-text">
+                    <p>
+                        If you have any new or gently used tennis equipment, apparel, or shoes, please consider donating
+                        them to our Give the Game Community Closet. Your donations will help us continue to "Take the Game
+                        to the Community," ensuring those we teach across the city have all the equipment needed from head
+                        to toe to learn the game!
+                    </p>
+                    <p>
+                        Email <a href="mailto:kaitlin.roselius@gmail.com?subject=Woods Community Closet">Kaitlin</a> to learn more.
+                    </p>
+                </div>
+            </div>
+        </div>
     );
 };
 

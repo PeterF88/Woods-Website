@@ -1,6 +1,10 @@
 import './Outreach.css';
 
-const Outreach = () => {
+interface OutreachProps {
+    hideHero?: boolean;
+}
+
+const Outreach: React.FC<OutreachProps> = ({ hideHero }) => {
     const communitySchools = [
         'Belmont Elementary', 'Calvert Elementary', 'Clinton Elementary', 'Culler Middle',
         'Dawes Middle', 'Elliott Elementary', 'Goodrich Middle', 'Hartley Elementary',
@@ -31,9 +35,11 @@ const Outreach = () => {
     return (
         <main className="outreach-page">
             {/* Yellow Banner - "Community Outreach Program" */}
-            <section className="outreach-banner">
-                <h1 className="outreach-banner-title">Community Outreach Program</h1>
-            </section>
+            {!hideHero && (
+                <section className="outreach-banner">
+                    <h1 className="outreach-banner-title">Community Outreach Program</h1>
+                </section>
+            )}
 
             {/* NJTL / USTA Foundation Section */}
             <section className="outreach-njtl-section">

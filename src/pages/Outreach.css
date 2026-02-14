@@ -15,7 +15,7 @@
 }
 
 .outreach-banner-title {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 3rem;
     font-weight: 700;
     color: #000;
@@ -44,7 +44,7 @@
 }
 
 .outreach-njtl-bold {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.15rem;
     font-weight: 700;
     color: #000;
@@ -53,7 +53,7 @@
 }
 
 .outreach-njtl-text {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 1rem;
     color: #333;
     line-height: 1.8;
@@ -67,7 +67,7 @@
 }
 
 .outreach-pillars-heading {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 2.2rem;
     font-weight: 700;
     color: #000;
@@ -78,7 +78,7 @@
 }
 
 .outreach-pillars-subheading {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 0.85rem;
     color: #555;
     text-align: center;
@@ -109,7 +109,7 @@
 }
 
 .outreach-pillar-title {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.8rem;
     font-weight: 700;
     color: #000;
@@ -119,7 +119,7 @@
 }
 
 .outreach-pillar-text {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 0.95rem;
     color: #333;
     line-height: 1.8;
@@ -134,7 +134,7 @@
 }
 
 .outreach-pillar-list li {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 0.95rem;
     color: #333;
     line-height: 2;
@@ -167,7 +167,7 @@
 }
 
 .outreach-mission-heading {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 2.4rem;
     font-weight: 700;
     color: #000;
@@ -177,7 +177,7 @@
 }
 
 .outreach-mission-content p {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 1rem;
     color: #333;
     line-height: 1.9;
@@ -216,7 +216,7 @@
 }
 
 .outreach-locations-heading {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 2.2rem;
     font-weight: 700;
     color: #000;
@@ -254,7 +254,7 @@
 }
 
 .outreach-location-title {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.2rem;
     font-weight: 700;
     color: #000;
@@ -264,7 +264,7 @@
 }
 
 .outreach-location-item {
-    font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 0.95rem;
     color: #333;
     line-height: 2;

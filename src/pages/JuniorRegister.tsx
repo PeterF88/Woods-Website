@@ -4,7 +4,11 @@ import SharedGroupClasses from '../components/SharedGroupClasses';
 import SharedClubChampionships from '../components/SharedClubChampionships';
 import './RegisterForClasses.css';
 
-const JuniorRegister = () => {
+interface JuniorRegisterProps {
+    hideHero?: boolean;
+}
+
+const JuniorRegister: React.FC<JuniorRegisterProps> = ({ hideHero }) => {
     const [activeSection, setActiveSection] = useState('group-classes');
     const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
@@ -46,14 +50,16 @@ const JuniorRegister = () => {
     return (
         <main className="register-page">
             {/* Hero Section */}
-            <section className="hero hero-small">
-                <div className="hero-background register-hero-bg" />
-                <div className="hero-overlay" />
-                <div className="hero-content">
-                    <h1>Junior — Register for Classes</h1>
-                    <p>Sign up for group classes, tournaments, and community programs</p>
-                </div>
-            </section>
+            {!hideHero && (
+                <section className="hero hero-small">
+                    <div className="hero-background register-hero-bg" />
+                    <div className="hero-overlay" />
+                    <div className="hero-content">
+                        <h1>Junior — Register for Classes</h1>
+                        <p>Sign up for group classes, tournaments, and community programs</p>
+                    </div>
+                </section>
+            )}
 
             {/* Sticky Navigation */}
             <nav className="register-nav">

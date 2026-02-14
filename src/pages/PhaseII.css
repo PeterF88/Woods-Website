@@ -39,7 +39,7 @@
 }
 
 .phasetwo-hero-title h1 {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: clamp(2.2rem, 4vw, 3.8rem);
     font-weight: var(--font-weight-bold);
     color: var(--color-text);
@@ -63,7 +63,7 @@
 }
 
 .phasetwo-card h2 {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-text);
@@ -74,7 +74,7 @@
 
 .phasetwo-card h3 {
     text-transform: none;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
     font-style: italic;
@@ -85,7 +85,7 @@
 }
 
 .phasetwo-card p {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.15rem;
     line-height: 1.85;
     color: var(--color-text);
@@ -109,7 +109,7 @@
 .phasetwo-signature a {
     color: var(--color-text);
     text-decoration: underline;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.15rem;
 }
 

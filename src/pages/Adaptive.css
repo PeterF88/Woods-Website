@@ -13,7 +13,7 @@
 }
 
 .adaptive-banner-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-size: 3rem;
     font-weight: 700;
     color: #1a1a1a;
@@ -30,7 +30,7 @@
 }
 
 .adaptive-section-heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-size: 2.2rem;
     font-weight: 700;
     color: #1a1a1a;
@@ -70,7 +70,7 @@
 }
 
 .adaptive-card-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-size: 1.3rem;
     font-weight: 700;
     color: #1a1a1a;
@@ -79,7 +79,7 @@
 }
 
 .adaptive-card-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-style: italic;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -90,7 +90,7 @@
 
 /* Contact Text */
 .adaptive-contact-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-style: italic;
     font-size: 1rem;
     text-align: center;
@@ -116,7 +116,7 @@
 }
 
 .wheelchair-text-block p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     font-size: 1rem;
     line-height: 1.8;
     color: #333;

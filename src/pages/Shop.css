@@ -1,3 +1,74 @@
-.shop-page {
-    min-height: 80vh;
+/* Community Closet Tab Content */
+
+.community-closet-content {
+    padding: 2rem 0;
+}
+
+.community-closet-title {
+    font-family: var(--font-family);
+    font-size: 2.2rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.community-closet-body {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.community-closet-logo {
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.community-closet-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.community-closet-text {
+    flex: 1;
+}
+
+.community-closet-text p {
+    font-family: var(--font-family);
+    font-size: 1.05rem;
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.community-closet-text a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.community-closet-text a:hover {
+    color: var(--color-darker);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .community-closet-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .community-closet-logo {
+        width: 200px;
+    }
+
+    .community-closet-title {
+        font-size: 1.8rem;
+    }
+
+    .community-closet-text p {
+        font-size: 0.95rem;
+    }
 }

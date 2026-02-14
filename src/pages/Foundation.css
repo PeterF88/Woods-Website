@@ -16,7 +16,7 @@
     font-size: var(--font-size-xl);
     color: var(--color-text);
     text-decoration: underline;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     letter-spacing: 0.02em;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .foundation-about h2 {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-bold);
     text-align: center;
@@ -47,7 +47,7 @@
 }
 
 .foundation-about-text {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.2rem;
     line-height: 1.9;
     color: var(--color-text);
@@ -62,7 +62,7 @@
     list-style: disc;
     padding-left: var(--spacing-8);
     margin-bottom: var(--spacing-8);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.2rem;
     line-height: 2;
     color: var(--color-text);
@@ -73,7 +73,7 @@
 }
 
 .foundation-fundraising-text {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: 1.2rem;
     line-height: 1.9;
     color: var(--color-text);
@@ -115,7 +115,7 @@
 }
 
 .foundation-board-section h2 {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-extrabold);
     text-align: center;
@@ -165,11 +165,11 @@
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-gray-600);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
 }
 
 .foundation-board-name {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-text);
@@ -182,7 +182,7 @@
 }
 
 .foundation-board-role {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-family);
     font-size: var(--font-size-lg);
     color: var(--color-text);
     font-weight: var(--font-weight-normal);

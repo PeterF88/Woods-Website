@@ -3,13 +3,19 @@ import '../index.css';
 import './JuniorTournaments.css';
 import tournamentImg from '../assets/tournament-players.png';
 
-const JuniorTournaments: React.FC = () => {
+interface JuniorTournamentsProps {
+    hideHero?: boolean;
+}
+
+const JuniorTournaments: React.FC<JuniorTournamentsProps> = ({ hideHero }) => {
     return (
         <div className="page-container">
             {/* Gray Banner */}
-            <section className="jt-banner">
-                <h1 className="jt-banner-title">Junior Tournaments</h1>
-            </section>
+            {!hideHero && (
+                <section className="jt-banner">
+                    <h1 className="jt-banner-title">Junior Tournaments</h1>
+                </section>
+            )}
 
             {/* Main Content */}
             <section className="jt-content-section">

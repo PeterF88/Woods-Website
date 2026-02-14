@@ -1,0 +1,169 @@
+/* AdultClasses.css */
+.adult-classes-container {
+    padding: var(--spacing-8) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.adult-classes-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-10);
+}
+
+.adult-class-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-bottom: var(--spacing-12);
+    align-items: stretch;
+}
+
+.adult-class-card {
+    padding: var(--spacing-10) var(--spacing-6);
+    text-align: center;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Gray Backgrounds for 1st, 3rd, and 4th columns */
+.adult-class-card:nth-child(1),
+.adult-class-card:nth-child(3),
+.adult-class-card:nth-child(4) {
+    background-color: var(--color-gray-200);
+    /* Use variable for consistency */
+}
+
+/* Yellow Background for 2nd column */
+.adult-class-card:nth-child(2) {
+    background-color: var(--color-secondary-light);
+    /* Pale yellow */
+}
+
+.adult-class-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.adult-class-title {
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-6);
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    line-height: 1.1;
+}
+
+.adult-class-level {
+    color: var(--color-text);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-4);
+    display: block;
+    font-style: italic;
+}
+
+.adult-class-description {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: var(--font-family);
+}
+
+@media (max-width: 1024px) {
+    .adult-class-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .adult-class-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.special-offer-box {
+    background-color: var(--color-secondary-light);
+    /* Assuming this exists or works */
+    
+    /* Light yellow fallback */
+    border: 1px solid var(--color-secondary);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-md);
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+.adult-leagues-section {
+    background-color: var(--color-gray-50);
+    padding: var(--spacing-10) var(--spacing-6);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-12);
+}
+
+.league-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-6);
+}
+
+.league-column h3 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.league-item {
+    margin-bottom: var(--spacing-4);
+}
+
+.league-level {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    display: block;
+    margin-bottom: var(--spacing-1);
+}
+
+.league-details {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.league-notes {
+    margin-top: var(--spacing-6);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+.self-organized-section {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: var(--spacing-10) var(--spacing-6);
+    border-radius: var(--radius-lg);
+}
+
+.self-organized-section h2 {
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-4);
+}
+
+.self-organized-section a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+.self-organized-section a:hover {
+    color: var(--color-light);
+}
