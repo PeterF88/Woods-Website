@@ -1,7 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Board.css';
 
+interface BoardMember {
+    name: string;
+    role: string;
+    bio?: string;
+    photoUrl?: string;
+}
+
 const Board = () => {
+    const [selectedMember, setSelectedMember] = useState<BoardMember | null>(null);
     const revealRefs = useRef<(HTMLElement | null)[]>([]);
 
     useEffect(() => {
@@ -29,29 +37,37 @@ const Board = () => {
         }
     };
 
-    const boardMembers = [
-        { name: "Board Member Name", role: "President" },
-        { name: "Board Member Name", role: "Vice President" },
-        { name: "Board Member Name", role: "Treasurer" },
-        { name: "Board Member Name", role: "Secretary" },
-        { name: "Board Member Name", role: "Member" },
-        { name: "Board Member Name", role: "Member" },
-        { name: "Board Member Name", role: "Member" },
-        { name: "Board Member Name", role: "Member" },
+    const boardMembers: BoardMember[] = [
+        { name: "Todd Peterson", role: "President", bio: "" },
+        { name: "Kile Johnson", role: "Vice President", bio: "" },
+        { name: "Stephanie Eells", role: "Treasurer", bio: "" },
+        { name: "Cary Kline", role: "Secretary", bio: "" },
+        { name: "Marg Donlan", role: "Board Member", bio: "" },
+        { name: "Linda Brown", role: "Board Member", bio: "" },
+        { name: "Brian Boesche", role: "Board Member", bio: "" },
+        { name: "Ashley Goldsmith", role: "Board Member", bio: "" },
+        { name: "Jean Uffelman", role: "Board Member", bio: "" },
+        { name: "Jeff Salem", role: "Board Member", bio: "" },
+        { name: "Lynn Callahan", role: "Board Member", bio: "" },
     ];
+
+    const openBio = (member: BoardMember) => {
+        setSelectedMember(member);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeBio = () => {
+        setSelectedMember(null);
+        document.body.style.overflow = 'auto';
+    };
 
     return (
         <main className="board-page">
             {/* Hero Section */}
-            <section className="hero">
-                <div
-                    className="hero-background"
-                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&h=800&fit=crop)' }}
-                />
-                <div className="hero-overlay" />
-                <div className="hero-content">
-                    <h1 className="hero-title">Our Board</h1>
-                    <p className="hero-subtitle">Woods Tennis Education Foundation Board</p>
+            <section className="hero-section">
+                <div className="container">
+                    <h1>Our Board</h1>
+                    <p>Woods Tennis Education Foundation Board</p>
                 </div>
             </section>
 
@@ -65,8 +81,9 @@ const Board = () => {
 
                     <div className="board-grid reveal" ref={addToRefs}>
                         {boardMembers.map((member, index) => (
-                            <div key={index} className="board-card">
+                            <div key={index} className="board-card" onClick={() => openBio(member)}>
                                 <div className="board-avatar">
+                                    {/* Placeholder for photo */}
                                     {member.name.charAt(0)}
                                 </div>
                                 <h3 className="board-name">{member.name}</h3>
@@ -76,6 +93,22 @@ const Board = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Bio Modal */}
+            {selectedMember && (
+                <div className="bio-modal-overlay" onClick={closeBio}>
+                    <div className="bio-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="bio-close-btn" onClick={closeBio}>&times;</button>
+                        <div className="bio-header">
+                            <h2>{selectedMember.name}</h2>
+                            <p className="bio-role">{selectedMember.role}</p>
+                        </div>
+                        <div className="bio-body">
+                            <p>{selectedMember.bio || "Bio information coming soon..."}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Contact CTA */}
             <section className="section section-gray" ref={addToRefs}>
