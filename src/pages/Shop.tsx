@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Shop.css';
 import closetLogo from '../assets/community_closet_logo.png';
 

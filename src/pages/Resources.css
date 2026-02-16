@@ -1,0 +1,133 @@
+/* Resources.css */
+.resources-page {
+    padding-bottom: 4rem;
+}
+
+.resources-hero {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resources-hero h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.resources-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.resources-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.resources-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.resources-list {
+    list-style: none;
+    /* Removed disc to look cleaner in grid, or keep it inside? Let's keep inside or standard grid gap */
+    padding: 0;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.resources-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.resources-list a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resources-list a:hover {
+    text-decoration: underline;
+}
+
+.opportunities-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.opportunities-list {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.opportunities-list li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.highlight-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 3rem 0;
+}
+
+/* Junior Tournaments Styles (Migrated) */
+.jt-image-wrapper-resource {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.jt-section-image-resource {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jt-text-block-resource {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.jt-click-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.jt-click-link:hover {
+    text-decoration: underline;
+}

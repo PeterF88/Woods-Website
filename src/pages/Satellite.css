@@ -93,10 +93,11 @@
 }
 
 .bright-lights-box a {
-    color: #e65100;
-    font-weight: 600;
-    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: underline;
 }
+
 
 .bright-lights-box a:hover {
     text-decoration: underline;
@@ -106,21 +107,21 @@
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 2rem;
-    background: var(--color-primary);
-    color: white;
-    font-weight: 600;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    font-weight: 700;
     font-size: 0.95rem;
     border-radius: 8px;
     text-decoration: none;
     text-align: center;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, color 0.3s;
     border: none;
     cursor: pointer;
 }
 
 .register-btn:hover {
-    background: var(--color-secondary);
-    color: var(--color-text);
+    background: var(--color-primary);
+    color: white;
     transform: translateY(-2px);
 }
 

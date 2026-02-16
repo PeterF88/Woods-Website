@@ -127,6 +127,9 @@ const JuniorClasses: React.FC<JuniorClassesProps> = ({ hideHero }) => {
                                 <div className="video-container">
                                     <iframe src="https://www.youtube.com/embed/LZY_iF7EjyY" title="Red Ball 2" allowFullScreen></iframe>
                                 </div>
+                                <div className="video-container">
+                                    <iframe src="https://www.youtube.com/embed/iEOA5jwPulo" title="Red Ball 3" allowFullScreen></iframe>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -189,9 +192,7 @@ const JuniorClasses: React.FC<JuniorClassesProps> = ({ hideHero }) => {
                                 <h4>How can parents help?</h4>
                                 <p>By the end of the Orange Ball Class players should be looking to develop a style that looks like “real tennis”. Exposure to both playing and watching matches can help players to develop their own game style. Tournament and match play is vital to put skills developed into play, and tournament and matches should focus the experience of playing, more than the focus on winning. When hitting with them, make sure that they are using the orange balls on the 60-foot court, this is real tennis.</p>
 
-                                <div className="video-container mt-4">
-                                    <iframe src="https://www.youtube.com/embed/iEOA5jwPulo" title="Orange Ball" allowFullScreen></iframe>
-                                </div>
+
                             </div>
                         ) : (
                             <div className="junior-section-text">

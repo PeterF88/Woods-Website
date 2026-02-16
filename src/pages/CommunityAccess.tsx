@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './CommunityAccess.css';
 import courtMap from '../assets/community_access_map.png';
 

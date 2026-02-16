@@ -34,9 +34,10 @@ const Header = () => {
       path: '/junior-tennis',
       dropdown: [
         { label: 'Junior Class Descriptions', path: '/junior-tennis?tab=0' },
-        { label: 'Junior Tournaments', path: '/junior-tennis?tab=1' },
+        { label: 'Private Lessons', path: '/junior-tennis?tab=1' },
         { label: 'Outreach / NJTL', path: '/junior-tennis?tab=2' },
-        { label: 'Register for Classes', path: '/junior-tennis?tab=3' }
+        { label: 'Register for Classes', path: '/junior-tennis?tab=3' },
+        { label: 'Resources', path: '/junior-tennis?tab=4' }
       ]
     },
     {

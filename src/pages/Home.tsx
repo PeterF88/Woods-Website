@@ -35,7 +35,7 @@ const Home = () => {
             title: 'Private Lessons',
             description: 'One-on-one instruction for players of all levels',
             image: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&h=400&fit=crop',
-            link: '/programs',
+            link: '/junior-tennis?tab=1',
         },
         {
             title: 'Junior Programs',
@@ -73,9 +73,13 @@ const Home = () => {
         <main className="home">
             {/* Hero Section */}
             <section className="hero hero-full">
-                <div
-                    className="hero-background"
-                    style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&h=1080&fit=crop)' }}
+                <video
+                    className="hero-video"
+                    src="/home-hero-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                 />
                 <div className="hero-overlay" />
                 <div className="hero-content">
@@ -142,41 +146,9 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Mission Section */}
-            <section className="section mission-section" ref={addToRefs}>
-                <div className="container">
-                    <div className="mission-content reveal" ref={addToRefs}>
-                        <h2>Taking the Game to the Community</h2>
-                        <p className="mission-text">
-                            Our mission is to develop players and provide play opportunities for individuals
-                            of all ages, backgrounds, and abilities in an inclusive environment promoting
-                            health and wellness in Lincoln and surrounding communities. We seek to make tennis
-                            a public sport, working intentionally to change perceptions that surround the game.
-                        </p>
-                        <Link to="/about" className="btn btn-primary btn-lg">
-                            Learn About Us
-                        </Link>
-                    </div>
-                </div>
-            </section>
 
-            {/* CTA Section */}
-            <section className="section section-gray cta-section" ref={addToRefs}>
-                <div className="container">
-                    <div className="cta-content reveal" ref={addToRefs}>
-                        <h2>Ready to Play?</h2>
-                        <p>Whether you're picking up a racquet for the first time or looking to improve your game, we're here to help.</p>
-                        <div className="cta-buttons">
-                            <Link to="/programs" className="btn btn-primary btn-lg">
-                                View Programs
-                            </Link>
-                            <Link to="/contact" className="btn btn-secondary btn-lg">
-                                Contact Us
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
         </main>
     );
 };

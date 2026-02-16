@@ -1,7 +1,7 @@
 import TabbedPage from '../components/TabbedPage';
 import Calendar from './Calendar';
 import HeartlandChallenge from './HeartlandChallenge';
-import Foundation from './Foundation';
+import TheWoodsEvent from '../components/TheWoodsEvent';
 
 const EventsMain = () => {
     return (
@@ -19,10 +19,11 @@ const EventsMain = () => {
             tabs={[
                 { label: 'Calendar', content: <Calendar /> },
                 { label: 'Heartland Challenge', content: <HeartlandChallenge /> },
-                { label: 'The Woods Event', content: <Foundation /> },
+                { label: 'The Woods Event', content: <TheWoodsEvent /> },
             ]}
         />
     );
 };
+
 
 export default EventsMain;

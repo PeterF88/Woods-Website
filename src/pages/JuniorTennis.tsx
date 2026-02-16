@@ -1,8 +1,9 @@
 import TabbedPage from '../components/TabbedPage';
 import JuniorClasses from './JuniorClasses';
-import JuniorTournaments from './JuniorTournaments';
+import PrivateLessons from './PrivateLessons';
 import Outreach from './Outreach';
 import JuniorRegister from './JuniorRegister';
+import Resources from './Resources';
 
 const JuniorTennis = () => {
     return (
@@ -20,9 +21,10 @@ const JuniorTennis = () => {
             }
             tabs={[
                 { label: 'Junior Class Descriptions', content: <JuniorClasses hideHero /> },
-                { label: 'Junior Tournaments', content: <JuniorTournaments hideHero /> },
+                { label: 'Private Lessons', content: <PrivateLessons hideHero /> },
                 { label: 'Outreach / NJTL', content: <Outreach hideHero /> },
                 { label: 'Register for Classes', content: <JuniorRegister hideHero /> },
+                { label: 'Resources', content: <Resources hideHero /> },
             ]}
         />
     );

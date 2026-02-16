@@ -1,0 +1,204 @@
+.woods-event-container {
+    font-family: 'Raleway', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.serif-font {
+    font-family: 'Playfair Display', "Times New Roman", serif;
+}
+
+.serif-font.large {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.woods-event-hero-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.woods-event-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.woods-event-section {
+    padding: 3rem 1.5rem;
+}
+
+.woods-event-section.dark-bg {
+    background-color: #333;
+    color: white;
+}
+
+.woods-event-section.white-bg {
+    background-color: #ffffff;
+}
+
+.woods-event-section.light-gray-bg {
+    background-color: #f7f7f7;
+}
+
+.woods-event-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.woods-event-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.woods-event-subheadline {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.woods-event-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.woods-event-location {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.woods-event-date {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.woods-event-schedule {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.woods-event-schedule p {
+    margin: 0.5rem 0;
+}
+
+.woods-event-schedule .italic {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.woods-event-mission {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+}
+
+.woods-event-pricing {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.woods-event-cta-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 300px;
+}
+
+.woods-event-cta-btn.dark {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: none;
+    font-size: 1.1rem;
+}
+
+.woods-event-cta-btn.dark:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+.woods-event-footer {
+    padding: 4rem 1.5rem;
+    background-color: #f9f9f9;
+}
+
+.woods-event-footer-content h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.woods-event-footer-content a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.woods-event-mailing-list-wrapper {
+    margin: 2.5rem 0;
+}
+
+.woods-event-mailing-btn {
+    display: inline-block;
+    background-color: #e8df0d;
+    /* Woods Yellow */
+    color: #1a1a1a;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 250px;
+}
+
+.woods-event-mailing-btn:hover {
+    background-color: #d8cf0d;
+    transform: scale(1.02);
+}
+
+.social-links-simple {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.woods-event-copyright {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .serif-font.large {
+        font-size: 2rem;
+    }
+
+    .woods-event-headline {
+        font-size: 1.8rem;
+    }
+
+    .woods-event-cta-btn {
+        min-width: 100%;
+    }
+}

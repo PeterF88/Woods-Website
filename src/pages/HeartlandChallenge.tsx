@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './HeartlandChallenge.css';
 
 const HeartlandChallenge = () => {
